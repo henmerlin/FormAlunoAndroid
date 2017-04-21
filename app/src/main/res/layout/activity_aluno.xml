@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/fab_margin"
+    tools:context="android.br.formulario.AlunoActivity"
+    android:orientation="vertical"
+>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        <!-- NOME -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/form_tab"
+                android:layout_height="wrap_content"
+                android:text="Nome:" />
+
+            <EditText
+                android:id="@+id/nome"
+                android:layout_width="@dimen/campo_texto"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- CELULAR -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/form_tab"
+                android:layout_height="wrap_content"
+                android:text="Celular:" />
+
+            <EditText
+                android:id="@+id/celular"
+                android:layout_width="@dimen/campo_texto"
+                android:maxLength="9"
+                android:inputType="number"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- E-MAIL -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/form_tab"
+                android:layout_height="wrap_content"
+                android:text="E-mail:" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="@dimen/campo_texto"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- MATRICULA -->
+        <LinearLayout
+            android:layout_width="@dimen/form_tab"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/form_tab"
+                android:layout_height="wrap_content"
+                android:text="Matricula:" />
+
+            <EditText
+                android:id="@+id/matricula"
+                android:layout_width="@dimen/campo_texto"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <!-- UNIDADE -->
+        <LinearLayout
+            android:layout_width="@dimen/form_tab"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/form_tab"
+                android:layout_height="wrap_content"
+                android:text="Unidade:" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:columnCount="2">
+
+                <RadioGroup
+                    android:id="@+id/unidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/angelo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ângelo" />
+
+                    <RadioButton
+                        android:id="@+id/batel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Batel" />
+
+                    <RadioButton
+                        android:id="@+id/hauer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hauer" />
+
+                    <RadioButton
+                        android:id="@+id/osorio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Osório" />
+
+                </RadioGroup>
+            </GridLayout>
+        </LinearLayout>
+
+        <!-- INTERESSES -->
+        <LinearLayout
+            android:layout_width="@dimen/form_tab"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/form_tab"
+                android:layout_height="wrap_content"
+                android:text="Interesses:" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:columnCount="3">
+
+                <CheckBox
+                    android:id="@+id/esportes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esportes" />
+
+                <CheckBox
+                    android:id="@+id/cinema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cinema" />
+
+                <CheckBox
+                    android:id="@+id/teatro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teatro" />
+
+                <CheckBox
+                    android:id="@+id/viagens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Viagens" />
+
+                <CheckBox
+                    android:id="@+id/leitura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leitura" />
+            </GridLayout>
+    </LinearLayout>
+
+
+    <!-- MUNUAL DO AUNO -->
+    <LinearLayout
+        android:layout_width="@dimen/form_tab"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/manual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Li e concordo com o Manual do Aluno" />
+    </LinearLayout>
+
+    <!-- BOTOES -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/cadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pronto" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limpar" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:id="@+id/resultado"
+        android:textSize="@dimen/title"/>
+
+
+        <!-- BOTOES -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/sendEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail" />
+
+            <Button
+                android:id="@+id/sendSMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SMS" />
+
+        </LinearLayout>
+
+    </TableLayout>
+    </ScrollView>
